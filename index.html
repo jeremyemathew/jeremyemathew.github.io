@@ -6,57 +6,67 @@
   Description: HTML for Lab 10 Problem 2
 -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Lab10 - Problem 2</title>
+    <title>Framework Page – MaterializeCSS</title>
+
+    <!-- Materialize CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
     <style>
-        body 
-        {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            line-height: 1.6;
-        }
-        
-        h1 
-        {
-            text-align: center;
-        }
-        code 
-        {
-            background: #eee;
-            padding: 4px;
-        }
+        body { padding: 20px; font-family: Arial, sans-serif; }
+        h1 { text-align: center; margin-bottom: 40px; }
+        .card { margin-bottom: 30px; }
     </style>
 </head>
 <body>
-    <h1>My Framework: GitHub Pages</h1>
 
-    <h2>How I Installed It</h2>
-    <p>I created a GitHub repository named <b>jeremyemathew.github.io</b>. 
-    GitHub automatically serves this repository as a website.</p>
+    <h1>My Framework Page: MaterializeCSS</h1>
 
-    <h2>How I Built the Page</h2>
-    <p>Inside the repository, I added a file called <code>index.html</code>.</p>
-    <p>index.html is the default webpage that a server loads when someone visits a site without specifying a file name</p>
-    <p>I wrote a simple HTML page using the built-in GitHub text editor. 
-    When I pushed my changes to GitHub, the page became live at:</p>
+    <div class="container">
 
-    <p><a href="https://jeremyemathew.github.io" target="_blank">
-        https://jeremyemathew.github.io
-    </a></p>
+        <!-- Installation Card -->
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title">How I Installed the Framework</span>
+                <p>
+                    I used MaterializeCSS because it is a simple front-end CSS framework. 
+                    To include it, I just added the CDN link in the &lt;head&gt; section of my HTML file:
+                </p>
+                <pre>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"&gt;</pre>
+            </div>
+        </div>
 
-    <h2>Difficulties and Solutions</h2>
-    <ul>
-        <li>The page did not show at first. I fixed it by:
-            <ul>
-                <li>Creating an <code>index.html</code> file which i had initaly named <code>lab10d.html</code></li>
-            </ul>
-        </li>
-        <li>After pushing changes, it took 1–2 minutes to update.</li>
-    </ul>
+        <!-- Building the Page Card -->
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title">How I Built the Page</span>
+                <p>
+                    I created this HTML page in GitHub using a text editor. I used Materialize classes for containers, rows, columns, and cards to structure the page.
+                </p>
+                <p>
+                    Each section is placed inside a <code>&lt;div class="card"&gt;</code> to make it visually organized.
+                </p>
+            </div>
+        </div>
 
-    <p>Everything now works correctly.</p>
+        <!-- Difficulties Card -->
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title">Difficulties and Solutions</span>
+                <ul class="browser-default">
+                    <li>Initially, I tried Bootstrap, which is not allowed, so I switched to MaterializeCSS.</li>
+                    <li>At first, the page didn’t show on GitHub Pages. I fixed it by creating <code>index.html</code> at the root of the repository and enabling Pages from the main branch.</li>
+                    <li>I also had to wait a few minutes for GitHub Pages to publish the changes.</li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="center-align">This page is hosted publicly on GitHub Pages and demonstrates my use of a front-end framework.</p>
+
+    </div>
+
 </body>
 </html>
 
